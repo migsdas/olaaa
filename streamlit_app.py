@@ -4,7 +4,7 @@ st.set_page_config(page_title="Cartão Especial, para menina mais linda e bocó 
 
 st.markdown("""
     <div style="text-align: center;">
-        <h1>💖 Para a pessoa mais especial 💖</h1>
+        <h1>💖 para a menina mais linda e bocó que eu ja vi 💖</h1>
         <p style="font-size: 22px;">
             Você é o motivo de tantos sorrisos meus.<br>
             Se você me deixar, seu celular explode! ✨<br>
