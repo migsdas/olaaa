@@ -1,16 +1,29 @@
-import streamlit as st
+import time
+import os
+from colorama import Fore, Style, init
+import itertools
 
-st.set_page_config(page_title="Cartão Especial, para menina mais linda e bocó q eu ja vi", page_icon="💌")
+init(autoreset=True)
 
-st.markdown("""
-    <div style="text-align: center;">
-        <h1>💖 para a menina mais linda e bocó que eu ja vi 💖</h1>
-        <p style="font-size: 22px;">
-            Você é o motivo de tantos sorrisos meus.<br>
-            Se você me deixar, seu celular explode! ✨<br>
-            <br>
-            — Com carinho, Miguel 
-        </p>
-        <img src="https://i.imgur.com/5M6pR0f.jpg" width="300"/>
-    </div>
-""", unsafe_allow_html=True)
+mensagem = [
+    "╔══════════════════════════╗",
+    "║                          ║",
+    "║    VOCÊ É INCRÍVEL!     ║",
+    "║      NUNCA SE ESQUEÇA   ║",
+    "║                          ║",
+    "╚══════════════════════════╝"
+]
+
+cores = [Fore.RED, Fore.YELLOW, Fore.GREEN, Fore.CYAN, Fore.BLUE, Fore.MAGENTA]
+
+def exibir_cartao():
+    for cor in itertools.cycle(cores):
+        os.system("cls" if os.name == "nt" else "clear")
+        for linha in mensagem:
+            print(cor + linha)
+        time.sleep(0.3)
+
+try:
+    exibir_cartao()
+except KeyboardInterrupt:
+    print(Style.RESET_ALL + "\nFechando cartão. Até mais!")
