@@ -1,4 +1,4 @@
-import colorama import Fore, Style, init
+from colorama import Fore, Style, init
 init(autorest=True)
 print(Fore.RED + Style.BRIGHT)
 print("💕 eu_te_amo💕\n")
